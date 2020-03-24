@@ -72,7 +72,7 @@ public class FXMLController {
             testo.add(tk.nextToken());
         }
         int sbagliate = 0;
-        for (RichWord r : model.splellCheckText(testo)) {
+        for (RichWord r : model.splellCheckText(testo, true)) {
             if (!r.isCorretta()) {
                 this.txtRisultato.appendText(r.getParola() + "\n");
                 sbagliate++;
